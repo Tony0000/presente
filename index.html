@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Nossa festinha de dois</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&amp;family=Fredoka:wght@500;600;700&amp;family=Nunito:wght@500;700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page">
+
+  <!-- bandeirinhas (geradas em js/app.js) -->
+  <div class="bunting" id="bunting" aria-hidden="true"></div>
+
+  <!-- topo -->
+  <header class="topbar">
+    <div class="brand"><span data-bind="nome1"></span> &amp; <span data-bind="nome2"></span></div>
+    <nav>
+      <a class="pill" href="#fotos">Fotos</a>
+      <a class="pill" href="#quiz">Quiz</a>
+    </nav>
+  </header>
+
+  <!-- hero -->
+  <section class="hero">
+    <svg class="balloon" style="--tilt:-6deg;left:3%;top:90px;width:84px" viewBox="0 0 80 140" aria-hidden="true">
+      <path d="M40 4C18 4 6 22 6 42c0 22 18 42 34 46 16-4 34-24 34-46C74 22 62 4 40 4z" fill="#C93A64"></path>
+      <path d="M34 90h12l-6 9z" fill="#C93A64"></path>
+      <path d="M40 99c-8 12 8 20 0 40" stroke="#3A1E3B" stroke-width="2" fill="none"></path>
+      <ellipse cx="26" cy="30" rx="6" ry="10" fill="#fff" opacity=".45" transform="rotate(25 26 30)"></ellipse>
+    </svg>
+    <svg class="balloon" style="--tilt:5deg;right:4%;top:40px;width:96px" viewBox="0 0 80 140" aria-hidden="true">
+      <path d="M40 4C18 4 6 22 6 42c0 22 18 42 34 46 16-4 34-24 34-46C74 22 62 4 40 4z" fill="#7CCBF5"></path>
+      <path d="M34 90h12l-6 9z" fill="#7CCBF5"></path>
+      <path d="M40 99c-8 12 8 20 0 40" stroke="#3A1E3B" stroke-width="2" fill="none"></path>
+      <ellipse cx="26" cy="30" rx="6" ry="10" fill="#fff" opacity=".55" transform="rotate(25 26 30)"></ellipse>
+    </svg>
+    <svg class="balloon" style="--tilt:-3deg;right:44%;bottom:30px;width:70px" viewBox="0 0 80 140" aria-hidden="true">
+      <path d="M40 4C18 4 6 22 6 42c0 22 18 42 34 46 16-4 34-24 34-46C74 22 62 4 40 4z" fill="#FFD25E"></path>
+      <path d="M34 90h12l-6 9z" fill="#FFD25E"></path>
+      <path d="M40 99c-8 12 8 20 0 40" stroke="#3A1E3B" stroke-width="2" fill="none"></path>
+      <ellipse cx="26" cy="30" rx="6" ry="10" fill="#fff" opacity=".6" transform="rotate(25 26 30)"></ellipse>
+    </svg>
+    <svg class="spark" style="left:46%;top:60px;width:30px" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,2 14.9,8.6 22,9.3 16.6,14 18.2,21 12,17.3 5.8,21 7.4,14 2,9.3 9.1,8.6" fill="#FFD25E" stroke="#3A1E3B" stroke-width="1.5" stroke-linejoin="round"></polygon></svg>
+    <svg class="spark" style="left:8%;bottom:90px;width:26px" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21C7 17.2 2.5 13.4 2.5 8.8 2.5 6 4.6 4 7.2 4c1.9 0 3.6 1 4.8 2.7C13.2 5 14.9 4 16.8 4c2.6 0 4.7 2 4.7 4.8 0 4.6-4.5 8.4-9.5 12.2z" fill="#C93A64"></path></svg>
+    <svg class="spark" style="right:10%;bottom:70px;width:34px" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,2 14.9,8.6 22,9.3 16.6,14 18.2,21 12,17.3 5.8,21 7.4,14 2,9.3 9.1,8.6" fill="#7CCBF5" stroke="#3A1E3B" stroke-width="1.5" stroke-linejoin="round"></polygon></svg>
+
+    <div class="hero-grid">
+      <div class="hero-text">
+        <div class="script in hero-kicker" data-bind="dedicatoria"></div>
+        <h1 class="in d1"><span data-bind="tituloAntes" class="plain"></span><span data-bind="tituloDestaque"></span><span data-bind="tituloDepois" class="plain"></span></h1>
+        <p class="in d2 hero-intro" data-bind="introducao"></p>
+        <div class="in d3 hero-cta">
+          <a class="btn primary" href="#quiz">Começar o quiz</a>
+          <a class="btn ghost" href="#fotos">Ver as fotos</a>
+        </div>
+        <div class="in d4 script hero-since">desde <span data-bind="desde"></span></div>
+      </div>
+
+      <div class="pop hero-photo">
+        <div class="pol" style="--r:3deg" id="hero-pol"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- álbum -->
+  <div class="scallop to-blue" aria-hidden="true"></div>
+  <section id="fotos" class="album">
+    <div class="album-inner">
+      <div class="reveal section-head">
+        <div class="script section-kicker" data-bind="album.subtitulo"></div>
+        <h2 data-bind="album.titulo"></h2>
+      </div>
+      <div class="album-grid" id="album-grid"></div>
+    </div>
+  </section>
+
+  <!-- quiz -->
+  <div class="scallop to-pink" aria-hidden="true"></div>
+  <section id="quiz" class="quiz">
+    <div class="quiz-inner">
+      <div class="reveal section-head">
+        <div class="script section-kicker" data-bind="quiz.subtitulo"></div>
+        <h2 data-bind="quiz.titulo"></h2>
+        <p data-bind="quiz.introducao"></p>
+      </div>
+      <div class="reveal quiz-card" id="quiz-card">
+        <div class="dots" id="quiz-dots" aria-hidden="true"></div>
+        <div id="quiz-stage"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- rodapé -->
+  <div class="scallop to-dark" aria-hidden="true"></div>
+  <footer class="footer">
+    <div class="script footer-kicker" data-bind="rodape.abertura"></div>
+    <div class="footer-names"><span data-bind="nome1"></span> &amp; <span data-bind="nome2"></span></div>
+    <div class="footer-since">desde <span data-bind="desde"></span></div>
+  </footer>
+
+</div>
+
+<script src="js/conteudo.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
